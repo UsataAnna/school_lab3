@@ -73,7 +73,7 @@ class StudentFormScreen(Screen):
             content=content,
             size_hint=(None, None),
             size=(320, 200),
-            auto_dismiss=False  # ← важливо, щоб не закривалося на фоні
+            auto_dismiss=False 
         )
 
         close_button.bind(on_press=popup.dismiss)

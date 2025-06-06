@@ -10,8 +10,6 @@ from student_dao import StudentDAO
 from save_student import StudentFormScreen
 
 
-
-# Екран списку
 class StudentListScreen(Screen):
     def __init__(self, dao, **kwargs):
         super().__init__(**kwargs)
@@ -54,7 +52,7 @@ class StudentListScreen(Screen):
         self.dao.delete_student(student_id)
         self.refresh_students()
 
-# Головний додаток
+
 class StudentApp(App):
     def build(self):
         dao = StudentDAO()
@@ -64,5 +62,4 @@ class StudentApp(App):
         return sm
 
 if __name__ == '__main__':
-    
     StudentApp().run()
